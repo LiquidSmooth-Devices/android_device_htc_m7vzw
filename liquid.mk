@@ -1,4 +1,3 @@
-# Copyright (C) 2013 The Android Open Source Project
 # Copyright (C) 2012 The LiquidSmooth Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -25,24 +24,13 @@
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 
-# inherit from common m7-common
--include device/htc/m7-common/BoardConfigCommon.mk
+$(call inherit-product, device/htc/m7vzw/full_m7vzw.mk)
 
-# Assert
-TARGET_OTA_ASSERT_DEVICE := m7wlv,m7vzw
+$(call inherit-product, vendor/liquid/config/common_cdma.mk)
 
-# Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := m7wlv
+$(call inherit-product, vendor/liquid/config/common_phone.mk)
 
-# Filesystem
-BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1946156032
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 27917287424
-BOARD_FLASH_BLOCK_SIZE := 131072
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=m7wlv BUILD_ID=JZO54K BUILD_FINGERPRINT="htc/m7wlv/m7wlv:4.2.2/JDQ39/200197.1:user/release-keys" PRIVATE_BUILD_DESC="1.10.605.8 CL221778 release-keys"
 
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-
-# inherit from the proprietary version
--include vendor/htc/m7vzw/BoardConfigVendor.mk
+PRODUCT_NAME := liquid_m7vzw
+PRODUCT_DEVICE := m7vzw
