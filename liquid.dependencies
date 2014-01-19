@@ -16,5 +16,11 @@
     "repository": "CyanogenMod/android_kernel_htc_m7",
     "target_path": "kernel/htc/m7",
     "revision": "cm-11.0"
+  },
+  {
+    "remote": "gh",
+    "repository": "TheMuppets/proprietary_vendor_htc",
+    "target_path": "vendor/htc",
+    "revision": "cm-11.0"
   }
 ]
