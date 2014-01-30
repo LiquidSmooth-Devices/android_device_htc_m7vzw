@@ -26,8 +26,6 @@
 
 $(call inherit-product, device/htc/m7vzw/full_m7vzw.mk)
 
-$(call inherit-product, vendor/liquid/config/common_cdma.mk)
-
 $(call inherit-product, vendor/liquid/config/common_phone.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
