@@ -7,6 +7,12 @@
   },
   {
     "remote": "gh",
+    "repository": "CyanogenMod/android_frameworks_opt_telephony-msim",
+    "target_path": "frameworks/opt/telephony-msim",
+    "revision": "cm-11.0"
+  },
+  {
+    "remote": "gh",
     "repository": "CyanogenMod/android_device_htc_m7-common",
     "target_path": "device/htc/m7-common",
     "revision": "cm-11.0"
