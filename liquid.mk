@@ -30,9 +30,9 @@ $(call inherit-product, vendor/liquid/config/common_phone.mk)
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=HTCOneVZW \
-    BUILD_ID=JSS15J \
-    BUILD_FINGERPRINT="VERIZON/HTCOneVZW/m7wlv:4.3/JSS15J/278010.1:user/release-keys" \
-    PRIVATE_BUILD_DESC="2.10.605.1 CL278010 release-keys"
+    BUILD_ID=KOT49H \
+    BUILD_FINGERPRINT="VERIZON/HTCOneVZW/m7wlv:4.4.2/KOT49H/334342.3:user/release-keys" \
+    PRIVATE_BUILD_DESC="4.10.605.3 CL334342 release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-verizon
 
