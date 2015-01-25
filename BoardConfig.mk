@@ -35,14 +35,10 @@ TARGET_OTA_ASSERT_DEVICE := m7wlv,m7vzw
 TARGET_BOOTLOADER_BOARD_NAME := m7wlv
 
 # Filesystem
-BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
-BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16776704
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2348809216
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 27380416512
-BOARD_FLASH_BLOCK_SIZE := 131072
-
-# RIL
-BOARD_PROVIDES_LIBRIL := true
+BOARD_CACHEIMAGE_PARTITION_SIZE := 805305856
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # cat /proc/emmc:
 # dev:        size     erasesize name
@@ -67,6 +63,9 @@ BOARD_PROVIDES_LIBRIL := true
 # mmcblk0p30: 034ffa00 00000200 "reserve_2"
 # mmcblk0p32: 05fffc00 00000200 "reserve_3"
 # mmcblk0p29: 06069e00 00000200 "reserve"
+
+# Radio
+BOARD_RIL_CLASS := ../../../device/htc/m7vzw/ril
 
 # inherit from the proprietary version
 -include vendor/htc/m7vzw/BoardConfigVendor.mk
