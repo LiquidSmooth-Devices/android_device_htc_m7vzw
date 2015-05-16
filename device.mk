@@ -18,12 +18,12 @@
 # call the proprietary setup
 $(call inherit-product-if-exists, vendor/htc/m7vzw/m7vzw-vendor.mk)
 
-# overlays
-DEVICE_PACKAGE_OVERLAYS += device/htc/m7vzw/overlay
-
 # OTA ID
 PRODUCT_PROPERTY_OVERRIDES += \
     otaupdater.otaid=liquidm7vzw
+
+# local overlays
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Inherit from m7-common
 $(call inherit-product, device/htc/m7-common/m7-common.mk)
